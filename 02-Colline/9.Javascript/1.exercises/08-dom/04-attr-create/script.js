@@ -11,4 +11,12 @@
 
 (() => {
     // your code here
+    let image = document.getElementById('source').getAttribute('data-image'); // on recupère la valeur de l'attribut
+    
+    let newImg = document.createElement('img');
+    newImg.setAttribute('data-image',image);
+    newImg.setAttribute('src',image);
+    document.getElementById('target').appendChild(newImg);
+    document.getElementById('source').remove();
+    
 })();

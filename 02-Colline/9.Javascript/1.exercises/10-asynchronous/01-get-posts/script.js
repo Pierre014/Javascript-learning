@@ -11,4 +11,15 @@
 
 (() => {
     // your code here
+        document.getElementById('run').addEventListener('click',()=>{
+            //idem que window.lib.getPosts((error,article)=>{...})
+            //fct getPosts prend un callback en para qui appelle deux paramètre, une errreur et 
+            // un tableau d'article
+            window.lib.getPosts(function callback(error,article){ 
+                if(article)
+                console.log(article);
+                else
+                console.log(error);
+            })
+        })
 })();

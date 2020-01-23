@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    let table = document.createElement('table');
+
+    document.getElementById('target').appendChild(table);
+
+    for(let i =1; i<=10;i++){
+        let tr = document.createElement('tr');
+        table.appendChild(tr);
+        for(let j =1; j<=10;j++){
+            let td = document.createElement('td');
+            td.textContent = `${j}*${i} = ${i*j}`;
+            tr.appendChild(td);
+        }
+    }
+
 })();

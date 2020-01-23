@@ -11,4 +11,23 @@
 
 (() => {
     // your code here
+    let paraElt = document.getElementsByTagName('p'); // on selectionne tout les selecteur
+    for(const para of paraElt){ //on fait une boucle pour passer en revue tout les p
+        if(para.className ==='target'){ //on pose une condition pour cibler les p ayant un la bonne class
+            para.textContent = 'owned';
+        }
+    }
+
+    /* autre solution*/
+    let paraElt = document.getElementsByClassName('target');
+    for(const para of paraElt){
+        para.textContent = 'owned';
+    }*/
+
+
+    // Autre solution trouvée valable
+    /*const targets = Array.from(document.getElementsByClassName("target"));
+      targets.forEach(target => {
+            target.innerHTML = "owned";
+      });*/
 })();

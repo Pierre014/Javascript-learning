@@ -11,4 +11,26 @@
 
 (() => {
     // your code here
+    let ol = document.getElementById('target');
+    let template = document.getElementById('tpl-hero')
+    document.getElementById('run').addEventListener('click',()=>{
+
+       ol.textContent =""; // beuuuuuh
+        fetch("http://localhost:3000/heroes")
+        .then(function(response){
+            return response.json();
+        }).then(function(data){
+           data.forEach(hero =>{
+               let newtemp = document.importNode(template.content, true);
+               newtemp.querySelector('.name').textContent = hero.name;
+               newtemp.querySelector('.alter-ego').textContent = hero.alterEgo;
+               newtemp.querySelector('.powers').textContent = hero.abilities;
+
+               ol.appendChild(newtemp);
+           })
+        })
+        
+        
+
+    })
 })();

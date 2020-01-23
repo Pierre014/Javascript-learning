@@ -11,4 +11,26 @@
 
 (() => {
     // your code here
+    function random(min,max){
+        return Math.floor(Math.random()*max)+min;
+    }
+    
+    const str = document.getElementById('target').innerHTML;
+    document.getElementById('target').innerHTML ="";
+    let tableau = str.split('');
+    let i = 0;
+
+    setInterval(() => {
+        if(i<tableau.length){
+            let span = document.createElement('span');
+            span.textContent= tableau[i];
+            document.getElementById('target').appendChild(span);
+            i++;
+        }else{
+            clearInterval();
+        }
+    }, random(50,500));
+
+    
+    
 })();

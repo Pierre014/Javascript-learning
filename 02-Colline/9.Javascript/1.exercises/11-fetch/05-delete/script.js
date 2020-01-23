@@ -11,4 +11,29 @@
 
 (() => {
     // your code here
+    const suprimer = async function(ident){
+
+        let sup = await fetch("http://localhost:3000/heroes/" +ident,{
+            method:'delete',
+        })
+        if(sup.ok){
+            let data = await sup.json();
+            console.log("suppression de l'objet: " + ident);
+            console.log(data);
+        }else{
+            console.error('erreur: '+sup.status);
+        }
+
+    }
+    document.getElementById('run').addEventListener('click',()=>{
+
+        let identity = document.getElementById('hero-id').value;
+
+        suprimer(identity);
+        
+
+    })
+
+
+
 })();

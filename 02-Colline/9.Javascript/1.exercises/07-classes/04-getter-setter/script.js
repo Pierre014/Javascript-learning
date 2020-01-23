@@ -11,4 +11,25 @@
 
 (() => {
     // your code here
+    class Person{
+        constructor(firstname,lastname){
+            this.firstname = firstname;
+            this.lastname = lastname;
+        }
+        get Fullname(){
+            return `${this.firstname} ${this.lastname}`; 
+        }
+        set Fullname(value){
+            const partie = value.split(' ');
+            this.firstname = partie[0];
+            this.lastname = partie[1];
+        }
+    }
+    document.getElementById('run').addEventListener('click',()=>{
+        let pierre = new Person('Pierre','Lorand');
+        console.log(pierre.Fullname); // pas besoin des parenthèses. Fullname agit comme une propriété!!!!
+        pierre.Fullname = 'King Doggy';
+        console.log(pierre.Fullname);
+        console.log(pierre);
+    })
 })();

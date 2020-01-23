@@ -11,4 +11,17 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener('click',()=>{
+    fetch("http://localhost:3000/heroes")
+    .then(response => response.text())
+    .then(response => console.log(response))
+    .catch(error => alert('erreur: '+error));
+
+     /*.then(function (response){ //première méthode
+            return response.json();
+        }).then(function(data){
+           console.log(data);     
+        })*/
+        //.then(Response => Response.json()).then(console.log); //deuxième méthode, syntaxe plus courte
+})
 })();

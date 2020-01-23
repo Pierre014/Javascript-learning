@@ -10,5 +10,14 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let increment = localStorage.getItem('countTime'); // recolte la valeur de storage stockée dans 'counttime')
+    document.getElementById('target').innerHTML = increment; //affiche la valeur
+
+    document.getElementById('increment').addEventListener('click',()=>{
+        
+        increment++; //incrément +1
+        document.getElementById('target').innerHTML = increment; //affiche sur la page
+        
+        localStorage.setItem('countTime',increment) // sauvegarde la valeur dans storage
+    })
 })();

@@ -12,8 +12,14 @@
 (() => {
     const keys = ["name", "species", "age", "gender", "color"];
     const values = ["Skitty", "cat", 9, "female", "tabby"];
+    let newKitty = [];
+    
+    for(let i=0;i<keys.length;i++){
+        newKitty[i] = [keys[i],values[i]];
+    }
     // your code here
+    const obj = Object.fromEntries(newKitty);
     document.getElementById('run').addEventListener('click',()=>{
-        
+        console.log(obj);
     })
 })();

@@ -11,4 +11,9 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener('click',async function(){
+
+        let article = await window.lib.getPosts();//la variable execute la fct window
+        console.log(article);
+    })
 })();

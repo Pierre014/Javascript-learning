@@ -11,4 +11,12 @@
 
 (() => {
     // your code here
+  document.getElementById('pass-one').setAttribute('maxlength',10);
+  document.getElementById('pass-one').addEventListener('keydown',()=>{
+      nbr = document.getElementById('pass-one').value.length;
+      document.getElementById('counter').textContent = `${nbr+1}/10`;
+      if(nbr == ""){
+        document.getElementById('counter').textContent = `${nbr}/10`;
+      }
+  })
 })();

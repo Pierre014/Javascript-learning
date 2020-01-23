@@ -17,4 +17,11 @@
         }
     }
     // your code here
+    const skitty = new Cat('Skitty',9);
+    const pixel = new Cat('Pixel',6);
+
+    document.getElementById('run').addEventListener('click', ()=>{
+        console.log(pixel.name, pixel.age +" ans");
+        console.log(skitty.name, skitty.age +" ans");
+    })
 })();

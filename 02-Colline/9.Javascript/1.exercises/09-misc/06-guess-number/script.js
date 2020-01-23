@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    let RandomNumber = Math.random()*100<<0;
+    let nombreCHoisi = prompt('choississez un nombre entre 1 et 100: ');
+    let nombreEssai = 0
+    while(parseInt(nombreCHoisi) != RandomNumber){
+        if(nombreCHoisi < RandomNumber){
+            nombreCHoisi = prompt('le nombre est trop petit, essaye à nouveau');
+        }
+        else if(parseInt(nombreCHoisi)>RandomNumber){
+            nombreCHoisi = prompt('le nombre est trop grand, essaye à nouveau');
+        }
+        nombreEssai+=1;
+        console.log(nombreEssai);
+    }
+    console.log(`félicitation le nombre est bien ${RandomNumber}, vous avez utilisé ${nombreEssai} essai(s)`);
 })();

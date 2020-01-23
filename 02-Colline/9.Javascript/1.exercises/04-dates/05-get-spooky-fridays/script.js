@@ -14,13 +14,16 @@
     document.getElementById("run").addEventListener('click',()=>{
         let annee = parseInt(document.getElementById('year').value);
         let mois =["jan", "fev","mars","avril","mai","juin","juillet","aout","sept","octo","nov","dec"];
-        let jour = ["diman","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
         let spooky = new Date();
-        spooky.setFullYear(annee);
-
-        for(let i = 0; i<mois.length;i++){
-            for(let b = 1; b<=31; i++){}
+         for(i = 0; i<mois.length;i++){
+            spooky.setFullYear(annee);
+            spooky.setMonth(i);
+            spooky.setDate(13);
+            if(spooky.getDay() == 5){
+                console.log("vendredi 13 au mois de "+mois[i])
+            }
         }
+        
 
     })
 })();

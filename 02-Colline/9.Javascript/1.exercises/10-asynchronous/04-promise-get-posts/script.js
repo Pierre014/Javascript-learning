@@ -11,4 +11,13 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener('click',()=>{
+        window.lib.getPosts() //appelle de la fonction
+        .then((article)=>{ //then permet de recupère la prommesse
+            console.log(article);
+        })
+        .catch((error)=>{ // si on a une erreur, on l'affiche
+            console.error(error)
+        })
+    })
 })();

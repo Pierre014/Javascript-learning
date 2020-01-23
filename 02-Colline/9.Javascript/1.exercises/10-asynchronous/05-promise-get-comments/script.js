@@ -11,4 +11,15 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener('click',()=>{
+        window.lib.getPosts()
+            .then(articles => { //on va rechercher la promesse de getPosts
+                articles.forEach(article => { //ici code effectué par la promesse
+                    window.lib.getComments(article.id).then(comment =>{ //promesse de comments
+                        article.comment = comment; // code de la promesse
+                    })
+                });
+                console.log(articles);
+            })
+    })
 })();

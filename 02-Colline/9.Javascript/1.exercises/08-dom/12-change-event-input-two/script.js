@@ -11,4 +11,22 @@
 
 (() => {
     // your code here
+    function motDePasse(){
+        let nbr = document.getElementById('pass-one').value.length;
+        let nombredeChiffre =0;
+        let mpvalue = document.getElementById('pass-one').value;
+            for(const val of mpvalue){
+                if(!isNaN(val)){
+                    nombredeChiffre +=1;
+                }
+            }
+        if(nbr<8 || nombredeChiffre <2){
+            document.getElementById('validity').textContent = "pas ok";
+        }else{
+            document.getElementById('validity').textContent = "ok";
+        }
+    }
+
+
+    document.getElementById('pass-one').addEventListener('keydown',motDePasse);
 })();

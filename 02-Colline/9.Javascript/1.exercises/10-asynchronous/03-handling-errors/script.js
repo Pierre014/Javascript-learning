@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+    document.getElementById('run').addEventListener('click', () => {
+        window.lib.getPersons((error, persons) => {
+            if (error) {
+                console.error(error)
+            } else {
+                console.log(persons);
+            }
+
+        })
+    })
 })();
