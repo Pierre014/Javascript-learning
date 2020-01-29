@@ -1,0 +1,39 @@
+body{
+    margin: auto;
+    height: auto;
+    width: 1080px;
+}
+
+h1{
+    text-align: center;
+    font-family:'Bowlby One SC', cursive;
+    box-shadow: grey 2px 2px 2px;
+    width: 500px;
+    margin: auto;
+    padding: 20px 0 20px 0;
+    border-radius: 5px;
+}
+
+blockquote{
+    margin-top: 50px;
+    box-shadow: grey 2px 2px 2px;
+    font-family: 'Caveat', cursive;
+    padding: 10px;
+    text-align: justify;
+    font-size: 30px;
+    border-radius: 5px;
+}
+button{
+    margin-left: 400px;
+    padding: 15px;
+    font-size: 18px;
+    background-color: white;
+    border: black 1px solid;
+    box-shadow: grey 2px 2px 2px;
+    border-radius: 5px;
+    font-family:'Bowlby One SC', cursive;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}

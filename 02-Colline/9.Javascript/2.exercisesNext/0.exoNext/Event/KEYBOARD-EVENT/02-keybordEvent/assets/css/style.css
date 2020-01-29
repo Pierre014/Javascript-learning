@@ -1,0 +1,41 @@
+body{
+    margin: auto;
+    width: 1080px;
+
+}
+.highlight{
+    opacity: 50%;
+}
+.container{
+    width:1080px;
+    height: 200px;
+    margin: 20px 0 20px 0;
+}
+#up{
+    margin-left: 420px;
+    width:200px;
+    height: 200px;
+    background-color: red;
+    text-align: center;
+}
+#left{
+    float: left;
+    width:200px;
+    height: 200px;
+    background-color: red;
+    text-align: center;
+}
+#right{
+    float: right;
+    width:200px;
+    height: 200px;
+    background-color: red;
+    text-align: center;
+}
+#down{
+    width:200px;
+    height: 200px;
+    background-color: red;
+    text-align: center;
+    margin-left: 420px;
+}
