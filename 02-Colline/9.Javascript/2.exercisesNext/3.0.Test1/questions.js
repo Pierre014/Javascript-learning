@@ -7,9 +7,9 @@ let tailleString = (texte) => {
     return texte.length;
 }
 let remplaceECar = (texte) => {
-    let a = texte.indexOf("e")
-    let text =  texte.substr(" ", a) + " " +texte.substr(a + 1 , texte.length);
-    return text;
+    const texte1 = texte.substring(0,1);
+    const texte2 = texte.substring(2)
+    return texte1+" "+texte2
 }
 let concatString = (texte1, texte2) => {
     return texte1+texte2;
@@ -67,6 +67,5 @@ let hypothenuse =  (ab, ac) => {
     return Math.sqrt((ab*ab)+(ac*ac));
 }
 let calculIMC =  (poids, taille) => {
-    let IMC = poids/(taille*taille);
-    return parseFloat(IMC.toFixed(2));
+    return parseFloat((poids/(taille*taille)).toFixed(2));
 }

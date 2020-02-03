@@ -7,55 +7,46 @@ let CreationTableauNombres =  () => {
 }
 
 let RemplacementElement =  (langages) => {
-    const tableau = CreationTableauLangages();
-    tableau.splice(2,1,'Javascript');
-    return tableau;
+    langages.splice(2,1,'Javascript');
+    return langages;
 }
 
 let AjoutElementLangages =  (langages) => {
-    const tableau = RemplacementElement();
-    tableau.push('Ruby','Python')
-    return tableau;
+    langages.push('Ruby','Python')
+    return langages;
 }
 
 let AjoutElementNombres =  (nombres) => {
-    const tableau = CreationTableauNombres();
-    tableau.unshift(-2,-1)
-    return tableau;
+    nombres.unshift(-2,-1)
+    return nombres;
 }
 
 let SuppressionPremierElement =  (langages) => {
-    const tableau = AjoutElementLangages();
-    tableau.shift();
-    return tableau;
+    langages.shift();
+    return langages;
 }
 
 let SuppressionDernierElement =  (langages) => {
-    const tableau = SuppressionPremierElement();
-    tableau.pop();
-    return tableau;
+    langages.pop();
+    return langages;
 }
 
 let ConversionChaineTableau =  (reseaux_sociaux_chaine) => {
-     const chaine = "Facebook,Twitter,Google +,Viadeo,LinkedIn";
-     tableau = chaine.split(',');
+     tableau = reseaux_sociaux_chaine.split(',');
      return tableau;
 }
 
 let ConversionTableauChaine =  (langages) => {
-    const tableau = SuppressionDernierElement();
-    const chaine = tableau.toString();
-    return chaine;
+    return langages.toString();
+    //langages.join(",")
 }
 
 let TriTableau =  (reseaux_sociaux) => {
-    const tableau = ConversionChaineTableau();
-    tableau.sort();
-    return tableau;
+    return reseaux_sociaux.sort();
+    
 }
 
 let InversionTableau =  (reseaux_sociaux) =>{
-    const tableau = SuppressionDernierElement();
-    tableau.reverse(); 
-    return tableau;
+    return reseaux_sociaux.reverse(); 
+
 }
