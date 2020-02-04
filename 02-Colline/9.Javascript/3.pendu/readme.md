@@ -13,7 +13,7 @@ Utiliser la console **ou** les fonctions natives suivantes :
 Info : le nombre d'essais est illimité
 
 * Créer un tableau pour contenir les lettres du mot : 'B','O','N','J','O','U','R', 
-* Créer un autre tableau pour mettre les lettres devinées : '_','_','_','_','_','_','_'
+* Créer un autre tableau pour mettre les lettres devinées : '_','_','_','_','_','_','_'é
 
 * Écrivez une fonction appelée "guessLetter" cette fonction va
     - Itérer à travers les lettres

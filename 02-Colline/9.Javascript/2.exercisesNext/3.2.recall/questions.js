@@ -26,7 +26,7 @@ let reverseWordsInArray = (array) => {
 }
 
 let everyPossiblePair = (array) => {
-    
+    console.log(array)
 }
 
 let allElementsExceptFirstThree = (array) => {
