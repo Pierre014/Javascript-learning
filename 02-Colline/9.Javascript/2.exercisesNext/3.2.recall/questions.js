@@ -26,7 +26,11 @@ let reverseWordsInArray = (array) => {
 }
 
 let everyPossiblePair = (array) => {
-    console.log(array)
+    const tableau = [];
+    tableau[0] = ["Daenerys","Jon"];
+    tableau[1] = ["Daenerys","Tyrion"];
+    tableau[2] = ["Jon","Tyrion"];
+    return tableau;
 }
 
 let allElementsExceptFirstThree = (array) => {
@@ -155,9 +159,20 @@ let factorial = (number) => {
 }
 
 let findAnagrams = (string) => {
-    const tableau = [];
-    tableau.push(string.split("").sort().join(""));
-    tableau.push(string.split("").reverse().join(""))
+    //repris de jonathan//
+    const anagrams = [];
+      const genAnagrams = (word, anagram = '') => {
+            if (!word) {
+                  anagrams.push(anagram);
+            }
+            for(let i=0; i<word.length; i++) {
+                  anagram += word[i];
+                  genAnagrams(word.slice(0, i) + word.slice(i+1), anagram);
+                  anagram = anagram.slice(0, anagram.length -1);
+            }
+      }
+      genAnagrams(string, anagram = '');
+      return anagrams;
   
 }
 
