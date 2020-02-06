@@ -1,11 +1,18 @@
 (()=>{
     //tableau pour le mot a trouver
+    //placement des éléments de base.
     const putWord= prompt("entrez le mot à deviner: "); 
     const WORD = putWord.toUpperCase().split('')
     const WORDFIND=[];
     let stringGuess = ""; //permettra de comparer les deux tableaux
     let countTrial = 0;
-
+    let countWrong = 10;
+    let stringWrongLetter = "";
+    let victory = document.createElement('p');
+    victory.style.fontSize = "x-large";
+    victory.style.textAlign = "center"
+    
+    document.getElementById('tentative').innerHTML=countWrong+" life(s)";
     stringGuess = WORD.join("")
     let wrong = document.createElement('p'); //recotera les mauvaises lettres
     wrong.style.textAlign = "center";
@@ -38,20 +45,23 @@
 
     //condition of victory
     if(stringGuess == stringFind){
-        let victory = document.createElement('p');
         victory.textContent = "VICTORY, you're found the word in "+countTrial+" trials";
-        victory.style.fontSize = "x-large";
-        victory.style.textAlign = "center"
         document.getElementById('hanged').appendChild(victory);
     }
-
     //if wrong letter choose
-        if(!stringGuess.includes(chooseLetter.toUpperCase())){
+        if(!stringGuess.includes(chooseLetter.toUpperCase())&&!stringWrongLetter.includes(chooseLetter.toUpperCase())){
             let span = document.createElement('span');
             span.textContent = chooseLetter+", ";
             span.style.textDecoration = "line-through";
             wrong.appendChild(span);
-
+            countWrong--;
+            document.getElementById('tentative').innerHTML=countWrong+" life(s)";
+            stringWrongLetter+=chooseLetter.toUpperCase();
+        }
+        if(countWrong ==0){
+            victory.textContent = "YOU LOOSE";
+            document.getElementById('letters').setAttribute('disabled','');
+            document.getElementById('hanged').appendChild(victory);
         }
     })
 

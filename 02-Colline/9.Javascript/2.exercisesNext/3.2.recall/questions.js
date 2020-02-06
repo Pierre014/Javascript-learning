@@ -133,7 +133,8 @@ let roundUp = (number) => {
 }
 
 let formatDateNicely = (date) => {
-    return "0"+date.getDate()+"/0"+date.getDay()+"/"+date.getFullYear();
+    //return "0"+date.getDate()+"/0"+date.getDay()+"/"+date.getFullYear();
+    return date.toLocaleDateString("fr")//wow
 }
 
 let getDomainName = (string) => {
